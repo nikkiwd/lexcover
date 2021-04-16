@@ -1,0 +1,247 @@
+{
+	"ar": {
+		"qid": "Q13955",
+		"source": "wiki40b"
+	},
+	"bg": {
+		"qid": "Q7918",
+		"source": "wiki40b"
+	},
+	"ca": {
+		"qid": "Q7026",
+		"source": "wiki40b"
+	},
+	"cs": {
+		"qid": "Q9056",
+		"source": "wiki40b"
+	},
+	"da": {
+		"qid": "Q9035",
+		"source": "wiki40b"
+	},
+	"de": {
+		"qid": "Q188",
+		"source": "wiki40b"
+	},
+	"el": {
+		"qid": "Q36510",
+		"source": "wiki40b"
+	},
+	"en": {
+		"qid": "Q1860",
+		"source": "wiki40b"
+	},
+	"es": {
+		"qid": "Q1321",
+		"source": "wiki40b"
+	},
+	"et": {
+		"qid": "Q9072",
+		"source": "wiki40b"
+	},
+	"fa": {
+		"qid": "Q9168",
+		"source": "wiki40b"
+	},
+	"fi": {
+		"qid": "Q1412",
+		"source": "wiki40b"
+	},
+	"fr": {
+		"qid": "Q150",
+		"source": "wiki40b"
+	},
+	"he": {
+		"qid": "Q9288",
+		"source": "wiki40b"
+	},
+	"hi": {
+		"qid": "Q11051",
+		"source": "wiki40b"
+	},
+	"hr": {
+		"qid": "Q6654",
+		"source": "wiki40b"
+	},
+	"hu": {
+		"qid": "Q9067",
+		"source": "wiki40b"
+	},
+	"id": {
+		"qid": "Q9240",
+		"source": "wiki40b"
+	},
+	"it": {
+		"qid": "Q652",
+		"source": "wiki40b"
+	},
+	"ko": {
+		"qid": "Q9176",
+		"source": "wiki40b"
+	},
+	"lt": {
+		"qid": "Q9083",
+		"source": "wiki40b"
+	},
+	"lv": {
+		"qid": "Q9078",
+		"source": "wiki40b"
+	},
+	"ms": {
+		"qid": "Q9237",
+		"source": "wiki40b"
+	},
+	"nb": {
+		"qid": "Q25167",
+		"remotefile": "no.txt.gz",
+		"source": "wiki40b"
+	},
+	"nl": {
+		"qid": "Q7411",
+		"source": "wiki40b"
+	},
+	"pl": {
+		"qid": "Q809",
+		"source": "wiki40b"
+	},
+	"pt": {
+		"qid": "Q5146",
+		"source": "wiki40b"
+	},
+	"ro": {
+		"qid": "Q7913",
+		"source": "wiki40b"
+	},
+	"ru": {
+		"qid": "Q7737",
+		"source": "wiki40b"
+	},
+	"sk": {
+		"qid": "Q9058",
+		"source": "wiki40b"
+	},
+	"sl": {
+		"qid": "Q9063",
+		"source": "wiki40b"
+	},
+	"sr": {
+		"qid": "Q9299",
+		"source": "wiki40b"
+	},
+	"sv": {
+		"qid": "Q9027",
+		"source": "wiki40b"
+	},
+	"th": {
+		"qid": "Q9217",
+		"source": "wiki40b"
+	},
+	"tl": {
+		"qid": "Q34057",
+		"source": "wiki40b"
+	},
+	"tr": {
+		"qid": "Q256",
+		"source": "wiki40b"
+	},
+	"uk": {
+		"qid": "Q8798",
+		"source": "wiki40b"
+	},
+	"vi": {
+		"qid": "Q9199",
+		"source": "wiki40b"
+	},
+
+	"br": {
+		"qid": "Q12107",
+		"remotefile": "bre_wikipedia_2016_100K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Breton",
+		"source": "unileipzig"
+	},
+	"cy": {
+		"qid": "Q9309",
+		"remotefile": "cym_wikipedia_2016_100K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Welsh",
+		"source": "unileipzig"
+	},
+	"eo": {
+		"qid": "Q143",
+		"remotefile": "epo_wikipedia_2016_300K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Esperanto",
+		"source": "unileipzig"
+	},
+	"eu": {
+		"qid": "Q8752",
+		"remotefile": "eus_wikipedia_2016_300K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Basque",
+		"source": "unileipzig"
+	},
+	"ha": {
+		"qid": "Q56475",
+		"remotefile": "hau_community_2017.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Hausa",
+		"source": "unileipzig"
+	},
+	"ig": {
+		"qid": "Q33578",
+		"remotefile": "ibo_community_2017.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Igbo",
+		"source": "unileipzig"
+	},
+	"la": {
+		"qid": "Q397",
+		"remotefile": "lat_wikipedia_2018_100K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Latin",
+		"source": "unileipzig"
+	},
+	"lb": {
+		"qid": "Q9051",
+		"remotefile": "ltz_wikipedia_2016_100K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Luxembourgish",
+		"source": "unileipzig"
+	},
+	"ml": {
+		"qid": "Q36236",
+		"remotefile": "mal_wikipedia_2016_300K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Malayalam",
+		"source": "unileipzig"
+	},
+	"mt": {
+		"qid": "Q9166",
+		"remotefile": "mlt_wikipedia_2016_30K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Maltese",
+		"source": "unileipzig"
+	},
+	"nan": {
+		"qid": "Q36495",
+		"remotefile": "nan_wikipedia_2016_100K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Min%20Nan%20Chinese",
+		"source": "unileipzig"
+	},
+	"nn": {
+		"qid": "Q25164",
+		"remotefile": "nno_wikipedia_2016_300K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Norwegian%20Nynorsk",
+		"source": "unileipzig"
+	},
+	"se": {
+		"qid": "Q33947",
+		"remotefile": "sme-no_web_2013_10K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Northern%20Sami",
+		"source": "unileipzig"
+	},
+	"ta": {
+		"qid": "Q5885",
+		"remotefile": "tam_wikipedia_2016_300K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Tamil",
+		"source": "unileipzig"
+	},
+	"tg": {
+		"qid": "Q9260",
+		"remotefile": "tgk_wikipedia_2016_100K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Tajik",
+		"source": "unileipzig"
+	}
+
+}

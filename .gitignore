@@ -1,0 +1,8 @@
+__pycache__/
+config.json
+corpora/
+dump/
+node_modules/
+output/
+node_modules/
+package-lock.json
