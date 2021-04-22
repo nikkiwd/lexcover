@@ -8,7 +8,8 @@ count = 0
 
 outputs = {}
 for language in meta.languages:
-	outputs[language] = open(meta.output_dir + "/" + "formlist-" + language + ".txt", "w")
+	filename = meta.output_dir + "/" + "formlist-" + language + ".txt"
+	outputs[language] = open(filename, "w")
 
 errorcount = 0
 dictcount = 0
@@ -24,7 +25,8 @@ for line in fh:
 	line = line.decode("utf-8").strip()
 
 	# Not long enough to contain lexeme data
-	if len(line) < 2: continue
+	if len(line) < 2:
+		continue
 
 	# Remove trailing comma
 	if line[-1] == ",":

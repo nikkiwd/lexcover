@@ -24,18 +24,19 @@ qmap = {}
 
 for language in data:
 	assert "source" in data[language]
+	source = data[language]["source"]
 
-	if data[language]["source"] == "wiki40b":
+	if source == "wiki40b":
 		if "remotefile" not in data[language]:
 			data[language]["remotefile"] = language + ".txt.gz"
 		data[language]["remoteurl"] = "https://download.wmcloud.org/corpora/" + data[language]["remotefile"]
 
-	elif data[language]["source"] == "unileipzig":
+	elif source == "unileipzig":
 		# TODO: Find out if this hostname is stable
 		data[language]["remoteurl"] = "https://pcai056.informatik.uni-leipzig.de/downloads/corpora/" + data[language]["remotefile"]
 
 	else:
-		print("ERROR: Unrecognised source for " + language + ": " + data[language]["source"])
+		print("ERROR: Unrecognised source for " + language + ": " + source)
 
 	qmap[language] = data[language]["qid"]
 	mapq[data[language]["qid"]] = language
@@ -60,4 +61,3 @@ def load_filter(language):
 		return filtered
 	except:
 		return []
-

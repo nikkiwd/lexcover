@@ -36,6 +36,5 @@ for language in meta.languages:
 			if top < 0:
 				break
 			output.write("# {} ({:,})\n".format(word, count))
-	
-	output.close()
 
+	output.close()

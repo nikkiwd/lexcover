@@ -1,5 +1,3 @@
-import urllib.request
-
 import meta
 
 for language in meta.languages:
@@ -50,10 +48,10 @@ for language in meta.languages:
 	output.write("* Forms in Wikidata: {:,}\n".format(len(forms)))
 	output.write("* Forms in Wikipedia: {:,}\n".format(wordcount))
 	output.write("* Tokens: {:,}\n".format(tokencount))
-	output.write("* Covered forms: {:,} ({:.1%})\n".format(coveredwords, 1.0*coveredwords/wordcount))
-	output.write("* Missing forms:  {:,} ({:.1%})\n".format(uncoveredwords, 1.0*uncoveredwords/wordcount))
-	output.write("* Covered tokens: {:,} ({:.1%})\n".format(coveredtokens, 1.0*coveredtokens/tokencount))
-	output.write("* Missing tokens: {:,} ({:.1%})\n".format(uncoveredtokens, 1.0*uncoveredtokens/tokencount))
+	output.write("* Covered forms: {:,} ({:.1%})\n".format(coveredwords, 1.0 * coveredwords / wordcount))
+	output.write("* Missing forms:  {:,} ({:.1%})\n".format(uncoveredwords, 1.0 * uncoveredwords / wordcount))
+	output.write("* Covered tokens: {:,} ({:.1%})\n".format(coveredtokens, 1.0 * coveredtokens / tokencount))
+	output.write("* Missing tokens: {:,} ({:.1%})\n".format(uncoveredtokens, 1.0 * uncoveredtokens / tokencount))
 	output.write("* [[Wikidata:Lexicographical coverage/{}/Missing|Most frequent missing forms]]\n".format(language))
 	output.write("</td><td>\n")
 	output.write("{{{{Graph:Chart|width=100|type=pie|legend=Forms|x=Covered,Missing|y1={},{}}}}}\n".format(
@@ -69,4 +67,3 @@ for language in meta.languages:
 	output.write("\n")
 
 	output.close()
-
