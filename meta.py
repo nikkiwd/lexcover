@@ -56,8 +56,8 @@ def load_filter(language):
 		for line in lines:
 			if not (line.startswith("*") or line.startswith("#")):
 				continue
-			_, word = line.split(" ", 1)
-			filtered.add(word.lower())
+			word = line[1:].strip().lower()
+			filtered.add(word)
 		return filtered
 	except:
 		return []
