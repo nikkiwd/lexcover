@@ -16,7 +16,7 @@ dictcount = 0
 
 try:
 	fh = gzip.open(meta.local_dump_file)
-except:
+except Exception:
 	print("Couldn't read {}".format(meta.local_dump_file))
 	sys.exit(1)
 
@@ -34,13 +34,16 @@ for line in fh:
 
 	lexeme = json.loads(line)
 
-	if (lexeme["language"] in meta.mapq) and (meta.mapq[lexeme["language"]] in meta.languages):
+	if (lexeme["language"] in meta.mapq) \
+		and (meta.mapq[lexeme["language"]] in meta.languages):
+
 		dictcount += 1
 		for form in lexeme["forms"]:
 			try:
 				for lcode in form["representations"]:
-					outputs[meta.mapq[lexeme["language"]]].write(form["representations"][lcode]["value"] + "\n")
-			except:
+					outputline = form["representations"][lcode]["value"] + "\n"
+					outputs[meta.mapq[lexeme["language"]]].write(outputline)
+			except Exception:
 				errorcount += 1
 				print(errorcount)
 				print(lexeme["id"])

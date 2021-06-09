@@ -5,7 +5,7 @@ for language in meta.languages:
 	forms = set()
 	try:
 		fh = open(meta.output_dir + "/" + "formlist-" + language + ".txt")
-	except:
+	except Exception:
 		print("Couldn't open {}".format("formlist-" + language + ".txt"))
 		continue
 	for line in fh:
@@ -13,7 +13,7 @@ for language in meta.languages:
 
 	try:
 		output = open(meta.output_dir + "/" + "missing-" + language + ".txt", "w")
-	except:
+	except Exception:
 		print("Couldn't open {}".format("missing-" + language + ".txt"))
 		continue
 
@@ -21,7 +21,7 @@ for language in meta.languages:
 
 	try:
 		fh = open(meta.output_dir + "/" + "wordlist-" + language + ".txt")
-	except:
+	except Exception:
 		print("Couldn't open {}".format("wordlist-" + language + ".txt"))
 		continue
 	for line in fh:

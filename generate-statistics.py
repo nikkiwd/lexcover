@@ -5,7 +5,7 @@ for language in meta.languages:
 	forms = set()
 	try:
 		fh = open(meta.output_dir + "/" + "formlist-" + language + ".txt")
-	except:
+	except Exception:
 		print("Couldn't read {}".format("formlist-" + language + ".txt"))
 		continue
 	for line in fh:
@@ -21,7 +21,7 @@ for language in meta.languages:
 	uncoveredwords = 0
 	try:
 		fh = open(meta.output_dir + "/" + "wordlist-" + language + ".txt")
-	except:
+	except Exception:
 		print("Couldn't read {}".format("wordlist-" + language + ".txt"))
 		continue
 	for line in fh:
@@ -38,32 +38,62 @@ for language in meta.languages:
 
 	try:
 		output = open(meta.output_dir + "/" + "stats-" + language + ".txt", "w")
-	except:
+	except Exception:
 		print("Couldn't open {}".format("stats-" + language + ".txt"))
 		continue
 
 	if meta.data[language]["source"] == "unileipzig":
-		output.write("These statistics use corpus data from the [{} Leipzig Corpora Collection].\n".format(meta.data[language]["infopage"]))
-	output.write("<table><tr><td>\n")
-	output.write("* Forms in Wikidata: {:,}\n".format(len(forms)))
-	output.write("* Forms in Wikipedia: {:,}\n".format(wordcount))
-	output.write("* Tokens: {:,}\n".format(tokencount))
-	output.write("* Covered forms: {:,} ({:.1%})\n".format(coveredwords, 1.0 * coveredwords / wordcount))
-	output.write("* Missing forms:  {:,} ({:.1%})\n".format(uncoveredwords, 1.0 * uncoveredwords / wordcount))
-	output.write("* Covered tokens: {:,} ({:.1%})\n".format(coveredtokens, 1.0 * coveredtokens / tokencount))
-	output.write("* Missing tokens: {:,} ({:.1%})\n".format(uncoveredtokens, 1.0 * uncoveredtokens / tokencount))
-	output.write("* [[Wikidata:Lexicographical coverage/{}/Missing|Most frequent missing forms]]\n".format(language))
-	output.write("</td><td>\n")
-	output.write("{{{{Graph:Chart|width=100|type=pie|legend=Forms|x=Covered,Missing|y1={},{}}}}}\n".format(
-		coveredwords,
-		uncoveredwords
-	))
-	output.write("</td><td>")
-	output.write("{{{{Graph:Chart|width=100|type=pie|legend=Tokens|x=Covered,Missing|y1={},{}}}}}\n".format(
-		coveredtokens,
-		uncoveredtokens
-	))
-	output.write("</td></td></table>\n")
-	output.write("\n")
+		output.write(
+			"These statistics use corpus data from the "
+			"[{} Leipzig Corpora Collection].\n"
+			.format(meta.data[language]["infopage"])
+		)
+
+	output.write(
+		"<table><tr><td>\n"
+		"* Forms in Wikidata: {:,}\n"
+		"* Forms in Wikipedia: {:,}\n"
+		"* Tokens: {:,}\n"
+		"* Covered forms: {:,} ({:.1%})\n"
+		"* Missing forms:  {:,} ({:.1%})\n"
+		"* Covered tokens: {:,} ({:.1%})\n"
+		"* Missing tokens: {:,} ({:.1%})\n"
+		"* [[Wikidata:Lexicographical coverage/{}/Missing"
+		"|Most frequent missing forms]]\n"
+		"</td><td>\n"
+		"{{{{Graph:Chart"
+		"|width=100"
+		"|type=pie"
+		"|legend=Forms"
+		"|x=Covered,Missing"
+		"|y1={},{}}}}}\n"
+		"</td><td>"
+		"{{{{Graph:Chart"
+		"|width=100"
+		"|type=pie"
+		"|legend=Tokens"
+		"|x=Covered,Missing"
+		"|y1={},{}}}}}\n"
+		"</td></td></table>\n"
+		"\n"
+		.format(
+			len(forms),
+			wordcount,
+			tokencount,
+			coveredwords,
+			1.0 * coveredwords / wordcount,
+			uncoveredwords,
+			1.0 * uncoveredwords / wordcount,
+			coveredtokens,
+			1.0 * coveredtokens / tokencount,
+			uncoveredtokens,
+			1.0 * uncoveredtokens / tokencount,
+			language,
+			coveredwords,
+			uncoveredwords,
+			coveredtokens,
+			uncoveredtokens
+		)
+	)
 
 	output.close()
