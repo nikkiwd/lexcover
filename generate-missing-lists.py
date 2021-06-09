@@ -25,10 +25,10 @@ for language in meta.languages:
 		print("Couldn't open {}".format("wordlist-" + language + ".txt"))
 		continue
 	for line in fh:
-		word, _, count = line.strip().rpartition(" ")
+		word, _, num = line.strip().rpartition(" ")
 		word = word.lower()
+		count = int(num)
 
-		count = int(count)
 		if word in forms or word in filtered:
 			pass
 		else:

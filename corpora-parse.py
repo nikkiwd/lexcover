@@ -1,10 +1,11 @@
 import gzip
 import json
+from typing import Dict
 
 import meta
 
 for language in meta.languages:
-	wordlist = {}
+	wordlist: Dict[str, int] = {}
 	print("Reading " + language)
 
 	errorcount = 0

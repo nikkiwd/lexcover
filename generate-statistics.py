@@ -25,8 +25,8 @@ for language in meta.languages:
 		print("Couldn't read {}".format("wordlist-" + language + ".txt"))
 		continue
 	for line in fh:
-		word, _, count = line.strip().rpartition(" ")
-		count = int(count)
+		word, _, num = line.strip().rpartition(" ")
+		count = int(num)
 		tokencount += count
 		wordcount += 1
 		if word in forms or word in filtered:
