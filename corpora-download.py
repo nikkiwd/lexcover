@@ -34,6 +34,10 @@ for language in meta.languages:
 
 	with tarfile.open(local_file, "r:gz") as f_in:
 		with gzip.open(new_local_file, "wb") as f_out:
+			if filename not in f_in.getnames():
+				print(filename + " not found in archive")
+				continue
+
 			for line in f_in.extractfile(filename) or []:
 				f_out.write(line.split(b"\t")[1])
 
