@@ -1,3 +1,8 @@
+## Wikidata Lexicographical Coverage
+
+This is a set of scripts to update the [Wikidata lexicographical coverage
+pages](https://www.wikidata.org/wiki/Wikidata:Lexicographical_coverage).
+
 ## Setup
 
 The generated missing lists can be copied manually or updated using `update-wiki.js`.
@@ -31,19 +36,15 @@ python3 corpora-download.py
 python3 corpora-parse.py
 ```
 
-Download the latest lexeme data dump.
+Download and parse the latest lexeme data dump.
 Dumps are currently produced weekly.
-It will skip the download if the file already exists.
+The download script will skip downloading the dump if the remote file is not
+newer than the local one.
+The parsing script will reparse the file each time it is run.
+
 
 ```
-python3 dump-download.py
-```
-
-Parse the lexeme data dump.
-It will reparse the file each time it is run.
-
-```
-python3 dump-parse.py
+python3 dump-download.py && python3 dump-parse.py
 ```
 
 Generate statistics and missing word lists.
