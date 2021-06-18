@@ -24,6 +24,8 @@ for language in meta.languages:
 	except Exception:
 		print("Couldn't open {}".format("wordlist-" + language + ".txt"))
 		continue
+
+	output.write("{{lc-head}}\n")
 	for line in fh:
 		word, _, num = line.strip().rpartition(" ")
 		word = word.lower()
@@ -35,6 +37,6 @@ for language in meta.languages:
 			top -= 1
 			if top < 0:
 				break
-			output.write("# {} ({:,})\n".format(word, count))
-
+			output.write("{{lc-row|" + word + "|" + str(count) + "}}\n")
+	output.write("{{lc-foot}}\n")
 	output.close()
