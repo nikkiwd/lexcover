@@ -22,7 +22,7 @@ and add the username and password to `config.json`.
 ## Run
 
 Download and parse the corpus files.
-These only needs to be run once unless new languages are added.
+These only need to be run once unless new languages are added.
 The download script will skip downloading any existing files but the parsing
 script will reparse the files each time it is run, which takes a while.
 
@@ -34,14 +34,13 @@ python3 corpora-parse.py
 Download the latest lexeme data dump.
 Dumps are currently produced weekly.
 It will skip the download if the file already exists.
-TODO: Check for a new dump instead of having to manually delete the file.
 
 ```
 python3 dump-download.py
 ```
 
 Parse the lexeme data dump.
-Note: It will reparse the file each time it is run.
+It will reparse the file each time it is run.
 
 ```
 python3 dump-parse.py
@@ -54,14 +53,7 @@ python3 generate-statistics.py
 python3 generate-missing-lists.py
 ```
 
-The statistics currently have to be manually copied to the wiki.
-If you have `xclip` installed, the files can copied to the clipboard with:
-
-```
-cat output/stats-* | xclip
-```
-
-Update the missing lists on wiki.
+Update the statistics and missing lists on wiki.
 
 ```
 node update-wiki.js
