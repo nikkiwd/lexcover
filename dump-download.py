@@ -20,7 +20,7 @@ if os.path.exists(filename):
 
 	# No new dump available
 	if local >= remote:
-		sys.exit(-1)
+		sys.exit(1)
 
 	print("Remote dump file is newer than local dump file")
 else:
