@@ -1,11 +1,14 @@
 import json
 import os
 import sys
+import time
 import urllib.request
 
 with open("language-data.json") as f:
 	data = json.load(f)
 	f.close()
+
+user_agent = "lexcover/0.1 (https://www.wikidata.org/wiki/User:Nikki)"
 
 corpora_dir = "corpora"
 wdexport_dir = "dump"
@@ -52,10 +55,12 @@ for language in data:
 
 
 def load_filter(language):
+	time.sleep(1)
 	try:
 		url = "https://www.wikidata.org/wiki/Wikidata:Lexicographical_coverage/" \
 			+ language + "/Filter?action=raw"
-		page = urllib.request.urlopen(url)
+		req = urllib.request.Request(url, headers={"User-Agent": user_agent})
+		page = urllib.request.urlopen(req)
 		text = page.read().decode("utf-8")
 		lines = text.split("\n")
 		filtered = set()
@@ -65,5 +70,7 @@ def load_filter(language):
 			word = line[1:].strip().lower()
 			filtered.add(word)
 		return filtered
-	except Exception:
+	except Exception as e:
+		if e.code != 404:
+			print("Error fetching filter for " + language + ": " + str(e.code))
 		return []
