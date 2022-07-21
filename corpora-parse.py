@@ -26,8 +26,14 @@ for language in meta.languages:
 		if linecount % 100000 == 0:
 			print("{:,} articles processed".format(linecount))
 		for c in [
-			b".", b",", b"_", b"(", b")", b"=", b"\"",
-			b"\xe2\x80\x9e", b"\xe2\x80\x9f", b"\xe0\xa5\xa4", b"\xe0\xa5\xa5"
+			# ASCII punctuation characters, except for & ' - /
+			b"!", b"\"", b"#", b"$", b"%", b"(", b")", b"*", b"+",
+			b",", b".", b":", b";", b"<", b"=", b">", b"?", b"@",
+			b"[", b"\\", b"]", b"^", b"_", b"`", b"{", b"|", b"}", b"~",
+			# Various Unicode quotation marks - “ ” „ ‟
+			b"\xe2\x80\x9c", b"\xe2\x80\x9d", b"\xe2\x80\x9e", b"\xe2\x80\x9f",
+			# Devanagari danda and double danda
+			b"\xe0\xa5\xa4", b"\xe0\xa5\xa5",
 		]:
 			line = line.replace(c, b" ")
 		words = line.split()
