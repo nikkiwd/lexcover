@@ -1,0 +1,5 @@
+[flake8]
+ignore =
+		W191, # Allow tabs for indentation
+		E117, # This does not support using tabs for indentation
+exclude = .git, __pycache__
