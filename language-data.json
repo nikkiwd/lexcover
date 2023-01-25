@@ -201,6 +201,12 @@
 		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Luxembourgish",
 		"source": "unileipzig"
 	},
+	"pa": {
+		"qid": "Q58635",
+		"remotefile": "pa_20230125/pa.txt.gz",
+		"infopage": "https://cqpweb.lancs.ac.uk/emillepunsp/index.php?ui=corpusMetadata",
+		"source": "archiveorg"
+	},
 	"ml": {
 		"qid": "Q36236",
 		"remotefile": "mal_wikipedia_2016_300K.tar.gz",
