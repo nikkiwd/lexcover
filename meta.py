@@ -42,6 +42,11 @@ for language in data:
 			"https://pcai056.informatik.uni-leipzig.de/downloads/corpora/" \
 			+ data[language]["remotefile"]
 
+	elif source == "archiveorg":
+		data[language]["remoteurl"] = \
+			"https://archive.org/download/" \
+			+ data[language]["remotefile"]
+
 	else:
 		print("ERROR: Unrecognised source for " + language + ": " + source)
 
