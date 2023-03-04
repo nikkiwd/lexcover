@@ -225,6 +225,12 @@
 		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Norwegian%20Nynorsk",
 		"source": "unileipzig"
 	},
+	"or": {
+		"qid": "Q33810",
+		"remotefile": "ori_wikipedia_2021_100K.tar.gz",
+		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Oriya",
+		"source": "unileipzig"
+	},
 	"se": {
 		"qid": "Q33947",
 		"remotefile": "sme-no_web_2013_10K.tar.gz",
