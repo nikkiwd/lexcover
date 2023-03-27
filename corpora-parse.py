@@ -34,6 +34,8 @@ for language in meta.languages:
 			b"\xe2\x80\x9c", b"\xe2\x80\x9d", b"\xe2\x80\x9e", b"\xe2\x80\x9f",
 			# Devanagari danda and double danda
 			b"\xe0\xa5\xa4", b"\xe0\xa5\xa5",
+                        # Perso-Arabic punctuation
+                        b"\xdb\x94\x20", b"\xd8\x8C\x20", b"\xd8\x9b\x20", b"\xd8\x9f\x20", b"\xc2\xbb\x20", b"\xc2\xab\x20", b"\xd9\xaa\x20", b"\xe0\xa5\xa4",
 		]:
 			line = line.replace(c, b" ")
 		words = line.split()
