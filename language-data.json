@@ -225,6 +225,24 @@
 		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Norwegian%20Nynorsk",
 		"source": "unileipzig"
 	},
+        "pa" {
+                "qid": "Q58635",
+                "remotefile": "pan_wikipedia_2021_300K.tar.gz",
+                "infopage": "https://wortschatz.uni-leipzig.de/en/download/Panjabi",
+                "source": "unileipzig"
+        },
+        "pnb" {
+                "qid": "Q58635",
+                "remotefile": "pnb_wikipedia_2021_300K.tar.gz",
+                "infopage": "https://wortschatz.uni-leipzig.de/en/download/Western%20Panjabi",
+                "source": "unileipzig"
+        },
+        "sd": {
+                "qid": "Q33997",
+                "remotefile": "snd_wikipedia_2021_100K.tar.gz",
+                "infopage": "https://wortschatz.uni-leipzig.de/en/download/Sindhi",
+                "source": "unileipzig"
+        },
 	"se": {
 		"qid": "Q33947",
 		"remotefile": "sme-no_web_2013_10K.tar.gz",
@@ -242,6 +260,12 @@
 		"remotefile": "tgk_wikipedia_2016_100K.tar.gz",
 		"infopage": "https://wortschatz.uni-leipzig.de/en/download/Tajik",
 		"source": "unileipzig"
-	}
+	},
+        "ur": {
+               "qid": "Q11051",
+               "remotefile": "urd_wikipedia_2021_300K.tar.gz",
+               "infopage": "https://wortschatz.uni-leipzig.de/en/download/Urdu',
+               "source": "unileipzig"
+        }
 
 }
